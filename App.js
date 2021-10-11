@@ -2,11 +2,19 @@ import React, { Component } from 'react';
 import { DemoComponentNonDefault } from './src/Lab1/DemoComponentNonDefault';
 import DemoComponent from './src/Lab1/DemoComponent';
 import DemoStyle from './src/Lab1/DemoStyle';
+import DemoStyleSheet from './src/Lab2/DemoStyleSheet';
+import DemoFlex from './src/Lab2/DemoFlex';
+import DemoUi from './src/Lab2/DemoUI';
+import DemoImage from './src/Lab2/DemoImage';
 class App extends Component {
   render() {
     return (
       // <DemoComponentNonDefault/>
-      <DemoStyle />
+      // <DemoStyle />
+      // <DemoStyleSheet/>
+      // <DemoFlex/>
+      // <DemoUi/>
+      <DemoImage/>
     );
   }
 }
