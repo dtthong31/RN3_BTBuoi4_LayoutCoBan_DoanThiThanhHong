@@ -6,6 +6,9 @@ import DemoStyleSheet from './src/Lab2/DemoStyleSheet';
 import DemoFlex from './src/Lab2/DemoFlex';
 import DemoUi from './src/Lab2/DemoUI';
 import DemoImage from './src/Lab2/DemoImage';
+import BindingData from './src/Lab3/BindingData';
+import BaiTapUI from './src/Lab3/BaiTapUI';
+import RenderList from './src/Lab3/RenderList';
 class App extends Component {
   render() {
     return (
@@ -14,7 +17,10 @@ class App extends Component {
       // <DemoStyleSheet/>
       // <DemoFlex/>
       // <DemoUi/>
-      <DemoImage/>
+      // <DemoImage/>
+      // <BindingData/>
+      // <BaiTapUI/>
+      <RenderList/>
     );
   }
 }
