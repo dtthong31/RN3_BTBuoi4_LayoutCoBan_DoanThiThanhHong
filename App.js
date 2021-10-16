@@ -9,6 +9,7 @@ import DemoImage from './src/Lab2/DemoImage';
 import BindingData from './src/Lab3/BindingData';
 import BaiTapUI from './src/Lab3/BaiTapUI';
 import RenderList from './src/Lab3/RenderList';
+import BtBindingData from './src/BtBindingData';
 class App extends Component {
   render() {
     return (
@@ -20,7 +21,8 @@ class App extends Component {
       // <DemoImage/>
       // <BindingData/>
       // <BaiTapUI/>
-      <RenderList/>
+      // <RenderList/>
+      <BtBindingData/>
     );
   }
 }
