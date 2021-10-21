@@ -9,18 +9,16 @@ import DemoImage from './src/Lab2/DemoImage';
 import BindingData from './src/Lab3/BindingData';
 import BaiTapUI from './src/Lab3/BaiTapUI';
 import RenderList from './src/Lab3/RenderList';
+import BtBindingData from './src/BtBindingData';
+import ExRender from './src/Lab4/ExRender';
+import DemoScroll from './src/Lab4/DemoScroll';
+import DemoFlatList from './src/Lab4/DemoFlatList';
+import DemoSectionList from './src/Lab4/DemoSectionList';
+import BTRender from './src/Lab4/BTRender';
 class App extends Component {
   render() {
     return (
-      // <DemoComponentNonDefault/>
-      // <DemoStyle />
-      // <DemoStyleSheet/>
-      // <DemoFlex/>
-      // <DemoUi/>
-      // <DemoImage/>
-      // <BindingData/>
-      // <BaiTapUI/>
-      <RenderList/>
+     <DemoSectionList/>
     );
   }
 }
