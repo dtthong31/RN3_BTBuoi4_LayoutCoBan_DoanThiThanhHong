@@ -15,10 +15,11 @@ import DemoScroll from './src/Lab4/DemoScroll';
 import DemoFlatList from './src/Lab4/DemoFlatList';
 import DemoSectionList from './src/Lab4/DemoSectionList';
 import BTRender from './src/Lab4/BTRender';
+import LayoutZalo from './src/LayoutZalo';
 class App extends Component {
   render() {
     return (
-     <DemoSectionList/>
+     <LayoutZalo/>
     );
   }
 }
