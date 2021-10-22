@@ -16,10 +16,11 @@ import DemoFlatList from './src/Lab4/DemoFlatList';
 import DemoSectionList from './src/Lab4/DemoSectionList';
 import BTRender from './src/Lab4/BTRender';
 import LayoutZalo from './src/LayoutZalo';
+import RockPaperScissor from './src/Lab5/RockPaperScissor';
 class App extends Component {
   render() {
     return (
-     <LayoutZalo/>
+     <RockPaperScissor/>
     );
   }
 }
