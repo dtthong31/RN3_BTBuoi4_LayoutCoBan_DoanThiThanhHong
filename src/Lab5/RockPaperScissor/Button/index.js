@@ -3,13 +3,13 @@ import { Text, StyleSheet, View, TouchableOpacity } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 export default class Button extends Component {
     render() {
-        const { title, colors } = this.props;
+        const { title, colors,onPlayPress } = this.props;
         return (
             <LinearGradient
                 style={styles.styleContainer}
                 colors={colors}
                 >
-                <TouchableOpacity  >
+                <TouchableOpacity onPress={onPlayPress} >
                     <Text style={{ color: 'white', fontSize: 20, fontWeight: '700' }}> {title} </Text>
                 </TouchableOpacity>
             </LinearGradient>
