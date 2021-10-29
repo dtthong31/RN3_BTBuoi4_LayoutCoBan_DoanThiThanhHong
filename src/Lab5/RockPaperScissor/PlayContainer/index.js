@@ -4,6 +4,7 @@ import { Text, StyleSheet, View ,Image} from 'react-native'
 export default class PlayContainer extends Component {
     render() {
         const {playImg,ironImg}= this.props;
+        // console.log(playImg);
         return (
             <View>
                 <Image style={[styles.styImg, styles.colorBorderImg]} source={playImg} />
