@@ -17,10 +17,15 @@ import DemoSectionList from './src/Lab4/DemoSectionList';
 import BTRender from './src/Lab4/BTRender';
 import LayoutZalo from './src/LayoutZalo';
 import RockPaperScissor from './src/Lab5/RockPaperScissor';
+import DemoRedux from './src/Lab6/DemoRedux';
+import { Provider } from 'react-redux';
+import { store } from './src/Lab6/redux/store';
 class App extends Component {
   render() {
     return (
-     <RockPaperScissor/>
+     <Provider store={store}>
+       <DemoRedux/>
+     </Provider>
     );
   }
 }
