@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { DemoComponentNonDefault } from './src/Lab1/DemoComponentNonDefault';
+import React, {Component} from 'react';
+import {DemoComponentNonDefault} from './src/Lab1/DemoComponentNonDefault';
 import DemoComponent from './src/Lab1/DemoComponent';
 import DemoStyle from './src/Lab1/DemoStyle';
 import DemoStyleSheet from './src/Lab2/DemoStyleSheet';
@@ -18,14 +18,16 @@ import BTRender from './src/Lab4/BTRender';
 import LayoutZalo from './src/LayoutZalo';
 import RockPaperScissor from './src/Lab5/RockPaperScissor';
 import DemoRedux from './src/Lab6/DemoRedux';
-import { Provider } from 'react-redux';
-import { store } from './src/Lab6/redux/store';
+import {Provider} from 'react-redux';
+import {store} from './src/Lab6/redux/store';
+import DemoLifeCycle from './src/Lab8/DemoLifecycle';
+import DemoCallApi from './src/Lab8/DemoCallAPI';
 class App extends Component {
   render() {
     return (
-     <Provider store={store}>
-       <DemoRedux/>
-     </Provider>
+      <Provider store={store}>
+        <DemoCallApi/>
+      </Provider>
     );
   }
 }

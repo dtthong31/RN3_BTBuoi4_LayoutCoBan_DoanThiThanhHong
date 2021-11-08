@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View,TouchableOpacity } from 'react-native'
-
+import React, { Component } from 'react';
+import { Text, StyleSheet, View,TouchableOpacity } from 'react-native';
+import { connect } from 'react-redux';
 class InfoContent extends Component {
     render() {
         return (
