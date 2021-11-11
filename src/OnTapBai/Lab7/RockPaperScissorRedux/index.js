@@ -3,38 +3,12 @@ import { Text, StyleSheet, View, ImageBackground, StatusBar, Image, SafeAreaView
 import Button from './Button';
 import { bao, bgGame, bua, keo, player, playerComputer } from '../images'
 import PlayContainer from './PlayContainer';
-import SelectItem from './SelectItem';
 import SelectContent from './SelectContent';
-export default class RockPaperScissor extends Component {
-    state = {
-        playerSelect: { id: 'keo', image: keo },
-        computerSelect: { id: 'keo', image: keo },
-        listSelect: [
-            { id: 'keo', image: keo },
-            { id: 'bua', image: bua },
-            { id: 'bao', image: bao }],
-        times: 4,
-        score: 0,
-    }
-    onSelect = playerSelect => {
-        this.setState({ playerSelect })
-    }
-    onPlayPress = () => {
-        if(this.state.times<=0){
-            Alert.alert("Game Alert","Game over!!");
-        }else{
-            let computerSelect ;
-            const randomBotSelect = setInterval(() => {
-                computerSelect = this.state.listSelect[Math.floor(Math.random() * 3)];
-                this.setState({ computerSelect }, () => {console.log(computerSelect);});
-            }, 500);
-            setTimeout(()=>{
-                clearInterval(randomBotSelect);
-                this.calResult()
-            },4000);
-        }
-        
-    }
+import { connect } from 'react-redux';
+import ButtonContent from './ButtonContent';
+class RockPaperScissorRedux extends Component {
+    
+    
     calResult = () => {
         const { playerSelect, computerSelect, times, score } = this.state;
         let timesResult = times;
@@ -82,9 +56,10 @@ export default class RockPaperScissor extends Component {
         }
         this.setState({ times: timesResult, score: scoreResult })
     }
+
     render() {
         console.log('render');
-        const { playerSelect, computerSelect, score, times, listSelect } = this.state;
+        const {playerSelect,computerSelect,score, times}= this.props;
         return (
             <ImageBackground source={bgGame} style={styles.container}>
                 <StatusBar barStyle='dark-content' />
@@ -93,21 +68,16 @@ export default class RockPaperScissor extends Component {
                     <View style={styles.playContainer}>
                         <PlayContainer playImg={playerSelect.image} ironImg={player} />
                         <PlayContainer playImg={computerSelect.image} ironImg={playerComputer} />
-
                     </View>
                     <View style={styles.selectContainer} >
-                        <SelectContent playerSelectItem={playerSelect.id} listSelect={listSelect} onSelect={this.onSelect} />
+                        <SelectContent  />
                     </View>
                     <View style={styles.infoContainer} >
                         <Text style={styles.infoText}>Score:{score}</Text>
                         <Text style={styles.infoText}>Times:{times}</Text>
                     </View>
-                    <View style={styles.buttonContainer} >
-                        <Button title='Play' onPlayPress={this.onPlayPress} colors={['#f9f', '#ff0']} />
-                        <Button title='Reset' onPlayPress={this.onPlayPress} colors={['#f9f', '#ff0']} />
-                    </View>
+                    <ButtonContent/>
                 </SafeAreaView>
-
             </ImageBackground>
         )
     }
@@ -164,13 +134,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
-    buttonContainer: {
-        flex: 2,
-        flexDirection: 'row',
-        marginVertical: 15,
-        alignItems: 'flex-start',
-        justifyContent: 'center'
-    },
+   
     styImg: {
         height: 100,
         width: 100,
@@ -185,3 +149,13 @@ const styles = StyleSheet.create({
     }
 
 })
+const mapStatetoProps = (state) => {
+    return {
+        playerSelect: state.gameReduces.playerSelect,
+        computerSelect: state.gameReduces.computerSelect,
+        times: state.gameReduces.times,
+        score: state.gameReduces.score,
+    }
+}
+
+export default connect(mapStatetoProps)(RockPaperScissorRedux);
