@@ -26,4 +26,7 @@ import {Provider} from 'react-redux';
 // import ListProductScreen from './src/Lab9/ListProductScreen';
 import store from "../OnTapBai/Lab7/redux/store"
 import RockPaperScissorRedux from "../OnTapBai/Lab7/RockPaperScissorRedux";
-export  {RockPaperScissorRedux,store,Provider};
+import DemoAxios from "../Lab9/DemoAxios";
+// import BTVN_Buoi12 from '../Excercise/BTVN_Buoi12';
+import OnBroadScreen from '../Lab10/OnBroadScreen'
+export  {RockPaperScissorRedux,store,Provider,DemoAxios,OnBroadScreen};
