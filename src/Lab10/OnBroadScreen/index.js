@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native'
+import LinearGradient from 'react-native-linear-gradient'
 import Buttons from '../components/Buttons'
 import Text from '../components/Text'
 export default class OnBroadScreen extends Component {
@@ -21,7 +22,7 @@ export default class OnBroadScreen extends Component {
                 <View style={styles.buttonContainer} >
                     <Buttons title={"Sign up"} style={styles.signUpButton} />
                     <View style={styles.gradient}>
-                        <Buttons onPress={this.props.navigateToOnLoginScreen} title={"Login"}  style={styles.lgbtn} />
+                        <Buttons onPress={this.props.navigateToOnLoginScreen} title={"Login"} style={styles.lgbtn} />
                     </View>
                 </View>
             </SafeAreaView>
@@ -51,9 +52,9 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         flex: 1,
-        
+
     },
-    signUpButton:{
+    signUpButton: {
         height: 70,
         backgroundColor: '#19191f',
     },
@@ -62,12 +63,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#040305',
         borderRadius: 15,
         borderWidth: 1,
-        margin: 1
+        margin: 1,
+
         // borderColor: "yellow"
     },
     gradient: {
         height: 72,
-        backgroundColor: '#fff',
+        backgroundColor: "rgb(248,72,72)",
         borderRadius: 15,
         marginTop: 10,
     }

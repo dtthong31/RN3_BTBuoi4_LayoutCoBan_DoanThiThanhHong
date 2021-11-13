@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       // <Provider store={store}>
-        <BTVN_Buoi12 />
+        <RootScreen />
       // </Provider>
     );
   }
