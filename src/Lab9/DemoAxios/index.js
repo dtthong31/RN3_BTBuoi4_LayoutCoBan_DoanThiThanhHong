@@ -15,6 +15,7 @@ export default class DemoAxios extends Component {
             url:"http://svcy3.myclass.vn/api/Product",
             method:'GET'
         }).then(({data})=>{
+            console.log(data);
             const image = data.content[0].image;
             const price = data.content[0].price;
             const description = data.content[0].description;

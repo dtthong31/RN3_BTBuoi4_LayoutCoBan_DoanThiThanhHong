@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { store, Provider, RockPaperScissorRedux } from "./src/Path"
-
+import { OnBroadScreen,store, Provider, RockPaperScissorRedux, DemoAxios, BTVN_Buoi12 } from "./src/Path"
+import RootScreen from './src/Lab10'
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <RockPaperScissorRedux />
-      </Provider>
+      // <Provider store={store}>
+        <RootScreen />
+      // </Provider>
     );
   }
 }
