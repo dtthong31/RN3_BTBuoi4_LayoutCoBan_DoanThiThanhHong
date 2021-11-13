@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#232323',
         height: 210,
         borderRadius: 20,
-        marginHorizontal: 15
+        marginHorizontal: 15  
     },
     styleItem: {
         flexDirection: 'row',

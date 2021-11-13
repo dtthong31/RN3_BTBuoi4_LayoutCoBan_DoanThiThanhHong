@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { Component } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { SafeAreaView, StyleSheet, View } from 'react-native'
 import IconButtonHeader, { fontIcon } from './components/IconButtonHeader'
 import ListItem from './components/ListItem'
 import NewItem from './components/NewItem'
@@ -32,9 +32,8 @@ export default class BTVN_Buoi12 extends Component {
     }
     render() {
         const { listProduct } = this.state;
-        // console.log("cattegories");
         return (
-            <View style={styles.container}>
+            <SafeAreaView style={styles.container}>
                 <View style={styles.iconButtonHeader}>
                     <IconButtonHeader nameIcon="reorder-two" size={50} color="white" />
                     <IconButtonHeader nameIcon="shopping-bag" font={fontIcon.materialIcons} size={30} color="white" />
@@ -49,7 +48,7 @@ export default class BTVN_Buoi12 extends Component {
                 <View style={styles.listItem} >
                     <ListItem listProduct={listProduct}/>
                 </View>
-            </View>
+            </SafeAreaView>
         )
     }
 }
